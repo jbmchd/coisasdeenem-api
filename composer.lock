@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2dd5e9f24f6db4cb8b936891dc6e07e1",
+    "content-hash": "1a72d6b57ac027922b96bc4fff50e76d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -832,6 +832,72 @@
             "time": "2020-09-30T07:37:11+00:00"
         },
         {
+            "name": "jbmchd/jb-laravel-auth-sanctum",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jbmchd/jb-laravel-auth-sanctum.git",
+                "reference": "9d9f889e27485915262b64bc765a54b3d63ae27e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jbmchd/jb-laravel-auth-sanctum/zipball/9d9f889e27485915262b64bc765a54b3d63ae27e",
+                "reference": "9d9f889e27485915262b64bc765a54b3d63ae27e",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/sanctum": "^2.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JbSanctum\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Joabe Machado",
+                    "email": "joabemachadodeabreu@gmail.com"
+                }
+            ],
+            "description": "Autenticação Laravel Sanctum para Jb Laravel Global",
+            "time": "2020-10-18T15:05:47+00:00"
+        },
+        {
+            "name": "jbmchd/jb-laravel-global",
+            "version": "v2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jbmchd/jb-laravel-global.git",
+                "reference": "143b51f3b7bf02740b5c66a2f8dcc1aeb4256c84"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jbmchd/jb-laravel-global/zipball/143b51f3b7bf02740b5c66a2f8dcc1aeb4256c84",
+                "reference": "143b51f3b7bf02740b5c66a2f8dcc1aeb4256c84",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JbGlobal\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Joabe Machado",
+                    "email": "joabemachadodeabreu@gmail.com"
+                }
+            ],
+            "description": "Base para projetos Laravel",
+            "time": "2020-10-11T21:28:01+00:00"
+        },
+        {
             "name": "laravel/framework",
             "version": "v8.9.0",
             "source": {
@@ -1413,6 +1479,46 @@
                 }
             ],
             "time": "2020-09-21T18:10:53+00:00"
+        },
+        {
+            "name": "lucascudo/laravel-pt-br-localization",
+            "version": "v1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lucascudo/laravel-pt-BR-localization.git",
+                "reference": "19f60fa3dc7246ff20a478d79da3015a8e03c86b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lucascudo/laravel-pt-BR-localization/zipball/19f60fa3dc7246ff20a478d79da3015a8e03c86b",
+                "reference": "19f60fa3dc7246ff20a478d79da3015a8e03c86b",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Lucascudo\\LaravelPtBRLocalization\\LaravelPtBRLocalizationServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Lucascudo\\LaravelPtBRLocalization\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Cascudo",
+                    "email": "lucas.sisau@gmail.com"
+                }
+            ],
+            "description": "Arquivos de linguagem em Português do Brasil (pt-BR) para Laravel >= 5.6",
+            "time": "2020-09-04T09:02:44+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -7247,7 +7353,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "jbmchd/jb-laravel-auth-sanctum": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

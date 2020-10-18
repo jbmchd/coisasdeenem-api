@@ -3,12 +3,13 @@
 namespace App\Providers;
 
 use Illuminate\Cache\RateLimiting\Limit;
-use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+// use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Route;
+use JbGlobal\Providers\RouteServiceProvider as ProvidersRouteServiceProvider;
 
-class RouteServiceProvider extends ServiceProvider
+class RouteServiceProvider extends ProvidersRouteServiceProvider
 {
     /**
      * The path to the "home" route for your application.
@@ -17,7 +18,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/home';
+    public const HOME = '/';
 
     /**
      * The controller namespace for the application.
@@ -46,7 +47,11 @@ class RouteServiceProvider extends ServiceProvider
             Route::middleware('web')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/web.php'));
+
+            $this->mapApiAuth();
+            $this->mapApiUsuario();
         });
+
     }
 
     /**
@@ -60,4 +65,21 @@ class RouteServiceProvider extends ServiceProvider
             return Limit::perMinute(60);
         });
     }
+
+    protected function mapApiAuth()
+    {
+        Route::namespace($this->getNamespace())
+                ->middleware(['api'])
+                ->prefix('api/auth')
+                ->group(base_path('routes/api/auth.php'));
+    }
+
+    protected function mapApiUsuario()
+    {
+        Route::namespace($this->getNamespace())
+                ->middleware(['api','auth:sanctum'])
+                ->prefix('api/usuario')
+                ->group(base_path('routes/api/usuario.php'));
+    }
+
 }

@@ -12,10 +12,13 @@
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "jbmchd/jb-laravel-auth-sanctum": "dev-main",
+        "jbmchd/jb-laravel-global": "^2.0",
         "laravel/framework": "^8.0",
         "laravel/sanctum": "^2.6",
         "laravel/telescope": "^4.1",
-        "laravel/tinker": "^2.0"
+        "laravel/tinker": "^2.0",
+        "lucascudo/laravel-pt-br-localization": "^1.1"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",

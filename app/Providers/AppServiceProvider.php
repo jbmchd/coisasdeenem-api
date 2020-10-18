@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
+use JbSanctum\Providers\AppServiceProvider as ProvidersAppServiceProvider;
 
-class AppServiceProvider extends ServiceProvider
+class AppServiceProvider extends ProvidersAppServiceProvider
 {
     /**
      * Register any application services.
@@ -23,6 +23,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        parent::boot();
     }
 }
