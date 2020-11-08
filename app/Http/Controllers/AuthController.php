@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\AuthService;
 use JbSanctum\Controllers\AuthController as ControllersAuthController;
-use JbSanctum\Services\AuthService;
+
 
 class AuthController extends ControllersAuthController
 {
