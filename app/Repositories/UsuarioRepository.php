@@ -7,9 +7,9 @@ use JbSanctum\Repositories\UsuarioRepository as RepositoriesUsuarioRepository;
 
 class UsuarioRepository extends RepositoriesUsuarioRepository
 {
-
-    public function __construct(Model $model)
-    {
-        parent::__construct($model);
-    }
+    protected $model = Model::class;
+    // public function __construct(Model $model)
+    // {
+    //     parent::__construct($model);
+    // }
 }

@@ -7,10 +7,10 @@ use JbGlobal\Services\CrudService;
 
 class UsuarioService extends CrudService
 {
-
-    public function __construct(Repository $repositorio)
-    {
-        parent::__construct($repositorio);
-    }
+    protected $repositorio = Repository::class;
+    // public function __construct(Repository $repositorio)
+    // {
+    //     parent::__construct($repositorio);
+    // }
 
 }

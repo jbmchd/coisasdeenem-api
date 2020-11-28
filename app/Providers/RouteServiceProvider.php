@@ -50,6 +50,7 @@ class RouteServiceProvider extends ProvidersRouteServiceProvider
 
             $this->mapApiAuth();
             $this->mapApiUsuario();
+            $this->mapApiProvas();
         });
 
     }
@@ -80,6 +81,15 @@ class RouteServiceProvider extends ProvidersRouteServiceProvider
                 ->middleware(['api','auth:sanctum'])
                 ->prefix('api/usuario')
                 ->group(base_path('routes/api/usuario.php'));
+    }
+
+    protected function mapApiProvas()
+    {
+        $namespace = 'Prova';
+        Route::namespace($this->getNamespace($namespace))
+                ->middleware(['api','auth:sanctum'])
+                ->prefix('api/provas')
+                ->group(base_path('routes/api/provas/areas_conhecimento.php'));
     }
 
 }

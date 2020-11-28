@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\AreaConhecimento;
+use App\Observers\Provas\AreasConhecimentoObserver;
 use JbSanctum\Providers\AppServiceProvider as ProvidersAppServiceProvider;
 
 class AppServiceProvider extends ProvidersAppServiceProvider
@@ -24,5 +26,6 @@ class AppServiceProvider extends ProvidersAppServiceProvider
     public function boot()
     {
         parent::boot();
+        AreaConhecimento::observe(AreasConhecimentoObserver::class);
     }
 }

@@ -8,12 +8,13 @@ use Illuminate\Http\Request;
 
 class UsuarioController extends CrudController
 {
-    protected $clientService;
+    protected $servico = UsuarioService::class;
+    // protected $clientService;
 
-    public function __construct(UsuarioService $usuarioService)
-    {
-        parent::__construct($usuarioService);
-    }
+    // public function __construct(UsuarioService $usuarioService)
+    // {
+    //     parent::__construct($usuarioService);
+    // }
 
 
     public function criar(Request $request)

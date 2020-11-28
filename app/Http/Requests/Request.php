@@ -2,21 +2,24 @@
 
 namespace App\Http\Requests;
 
-use JbGlobal\Requests\Request as RequestsRequest;
+use JbGlobal\Requests\Request as JbRequest;
 
-class Request extends RequestsRequest
+class Request extends JbRequest
 {
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
-    public function rules()
-    {
-        $this->request->remove('_token');
+    // public function rules()
+    // {
+    //     parent::rules();
 
-        return [
-            //
-        ];
-    }
+    //     $regras = [
+    //         'id' => ['integer'],
+    //     ];
+
+    //     $regras_selecionadas = [];
+    //     switch ($this->getMetodo()) {
+    //         case 'atualizar':
+    //             $regras_selecionadas['id'] = array_merge($regras['id'], ["required"]);
+    //             break;
+    //     }
+    //     return $regras_selecionadas;
+    // }
 }

@@ -8,9 +8,10 @@ use JbSanctum\Controllers\AuthController as ControllersAuthController;
 
 class AuthController extends ControllersAuthController
 {
-    public function __construct(AuthService $authService)
-    {
-        parent::__construct($authService);
-    }
+    protected $servico = AuthService::class;
+    // public function __construct(AuthService $authService)
+    // {
+    //     parent::__construct($authService);
+    // }
 
 }
