@@ -4,7 +4,7 @@ namespace App\Http\Requests\Provas;
 
 use App\Http\Requests\Request;
 
-class AreasConhecimentoRequest extends Request
+class AreaConhecimentoRequest extends Request
 {
     /**
      * Get the validation rules that apply to the request.

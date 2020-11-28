@@ -13,6 +13,14 @@ return [
     |
     */
 
+    // JbGlobal Messages
+    'primary_key' => 'O campo ":attribute" precisa ser um número maior que 0',
+    'foreign_key' => 'O campo ":attribute" deve existir na tabela-pai',
+    'cpf' => 'CPF Inválido',
+    'cnpj' => 'CNPJ Inválido',
+    'cep' => 'CEP Inválido',
+    'email_unique' => 'O campo ":attribute" já está sendo utilizado.',
+
     'accepted'             => 'O campo :attribute deve ser aceito.',
     'active_url'           => 'O campo :attribute não é uma URL válida.',
     'after'                => 'O campo :attribute deve ser uma data posterior a :date.',

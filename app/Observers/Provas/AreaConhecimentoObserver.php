@@ -4,7 +4,7 @@ namespace App\Observers\Provas;
 
 use App\Models\AreaConhecimento;
 
-class AreasConhecimentoObserver
+class AreaConhecimentoObserver
 {
     /**
      * Handle the area_conhecimento "creating" event.

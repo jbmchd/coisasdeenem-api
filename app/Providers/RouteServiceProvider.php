@@ -86,10 +86,38 @@ class RouteServiceProvider extends ProvidersRouteServiceProvider
     protected function mapApiProvas()
     {
         $namespace = 'Prova';
+        $prefix = 'api/provas';
+        $base_path = 'routes/api/provas';
+
         Route::namespace($this->getNamespace($namespace))
                 ->middleware(['api','auth:sanctum'])
-                ->prefix('api/provas')
-                ->group(base_path('routes/api/provas/areas_conhecimento.php'));
+                ->prefix("$prefix/areas-conhecimento")
+                ->group(base_path("$base_path/area_conhecimento.php"));
+
+        Route::namespace($this->getNamespace($namespace))
+                ->middleware(['api','auth:sanctum'])
+                ->prefix("$prefix/disciplinas")
+                ->group(base_path("$base_path/disciplinas.php"));
+
+        Route::namespace($this->getNamespace($namespace))
+                ->middleware(['api','auth:sanctum'])
+                ->prefix("$prefix/ensinos")
+                ->group(base_path("$base_path/ensino.php"));
+
+        Route::namespace($this->getNamespace($namespace))
+                ->middleware(['api','auth:sanctum'])
+                ->prefix("$prefix/materias")
+                ->group(base_path("$base_path/materia.php"));
+
+        Route::namespace($this->getNamespace($namespace))
+                ->middleware(['api','auth:sanctum'])
+                ->prefix("$prefix/conteudos")
+                ->group(base_path("$base_path/conteudo.php"));
+
+        Route::namespace($this->getNamespace($namespace))
+                ->middleware(['api','auth:sanctum'])
+                ->prefix("$prefix/provas")
+                ->group(base_path("$base_path/prova.php"));
     }
 
 }

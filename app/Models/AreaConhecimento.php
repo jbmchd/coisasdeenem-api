@@ -11,4 +11,9 @@ class AreaConhecimento extends Model
     protected $fillable = [
         'id', 'nome', 'sigla', 'ativo'
     ];
+
+    public function disciplinas()
+    {
+        return $this->hasMany(Disciplina::class);
+    }
 }

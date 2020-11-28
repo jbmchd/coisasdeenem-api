@@ -3,12 +3,12 @@
 namespace App\Http\Controllers\Prova;
 
 use App\Http\Controllers\CrudController;
-use App\Services\Provas\AreaConhecimentoService;
-use App\Http\Requests\Provas\AreaConhecimentoRequest as Request;
+use App\Services\Provas\ProvaService;
+use App\Http\Requests\Provas\ProvaRequest as Request;
 
-class AreaConhecimentoController extends CrudController
+class ProvaController extends CrudController
 {
-    protected $servico = AreaConhecimentoService::class;
+    protected $servico = ProvaService::class;
 
     public function criar(Request $request)
     {
